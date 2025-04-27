@@ -22,17 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Botões de demonstração para flex-direction
-    const directionBtns = document.querySelectorAll('.demo-btn[data-value]');
+    // CORREÇÃO: Separando os seletores para cada tipo de botão para evitar conflitos
+    // Botões de demonstração para flex-direction (na seção Básico)
+    const directionBtnsBasic = document.querySelectorAll('.concept:nth-of-type(2) .demo-btn[data-value]');
     const directionDemo = document.querySelector('.direction-demo');
     
-    if (directionBtns.length && directionDemo) {
-        directionBtns.forEach(btn => {
+    if (directionBtnsBasic.length && directionDemo) {
+        directionBtnsBasic.forEach(btn => {
             btn.addEventListener('click', function() {
                 const value = this.dataset.value;
                 
                 // Remove classe active de todos os botões
-                directionBtns.forEach(b => b.classList.remove('active'));
+                directionBtnsBasic.forEach(b => b.classList.remove('active'));
                 
                 // Adiciona classe active ao botão clicado
                 this.classList.add('active');
@@ -50,34 +51,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Botões para justify-content e align-items
-    const propertyBtns = document.querySelectorAll('.demo-btn[data-property]');
+    const justifyBtns = document.querySelectorAll('.demo-btn[data-property="justify-content"]');
+    const alignBtns = document.querySelectorAll('.demo-btn[data-property="align-items"]');
+    const justifyDemo = document.querySelector('.justify-demo');
+    const alignDemo = document.querySelector('.align-demo');
     
-    if (propertyBtns.length) {
-        propertyBtns.forEach(btn => {
+    // Manipuladores para justify-content
+    if (justifyBtns.length && justifyDemo) {
+        justifyBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                const property = this.dataset.property;
                 const value = this.dataset.value;
-                const demoClass = property === 'justify-content' ? '.justify-demo' : '.align-demo';
-                const demo = document.querySelector(demoClass);
                 
-                if (demo) {
-                    // Remove active dos botões com a mesma propriedade
-                    document.querySelectorAll(`.demo-btn[data-property="${property}"]`).forEach(b => {
-                        b.classList.remove('active');
-                    });
-                    
-                    // Adiciona active ao botão clicado
-                    this.classList.add('active');
-                    
-                    // Aplica o valor à demo
-                    demo.style[property] = value;
-                    
-                    // Highlight
-                    demo.classList.add('highlight');
-                    setTimeout(() => {
-                        demo.classList.remove('highlight');
-                    }, 500);
-                }
+                // Remove active dos botões
+                justifyBtns.forEach(b => b.classList.remove('active'));
+                
+                // Adiciona active ao botão clicado
+                this.classList.add('active');
+                
+                // Aplica o valor à demo
+                justifyDemo.style.justifyContent = value;
+                
+                // Highlight
+                justifyDemo.classList.add('highlight');
+                setTimeout(() => {
+                    justifyDemo.classList.remove('highlight');
+                }, 500);
+            });
+        });
+    }
+    
+    // Manipuladores para align-items
+    if (alignBtns.length && alignDemo) {
+        alignBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const value = this.dataset.value;
+                
+                // Remove active dos botões
+                alignBtns.forEach(b => b.classList.remove('active'));
+                
+                // Adiciona active ao botão clicado
+                this.classList.add('active');
+                
+                // Aplica o valor à demo
+                alignDemo.style.alignItems = value;
+                
+                // Highlight
+                alignDemo.classList.add('highlight');
+                setTimeout(() => {
+                    alignDemo.classList.remove('highlight');
+                }, 500);
             });
         });
     }
@@ -251,4 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.card-exercise')?.style.cssText = 'display: flex; justify-content: center; align-items: center; height: 100%;';
     document.querySelector('.page-layout-demo')?.style.cssText = 'display: flex; flex-direction: column; min-height: 100%;';
     document.querySelector('.page-layout-demo .page-content')?.style.cssText = 'flex: 1;';
+    
+    // Inicializa estados padrão para demonstrações interativas
+    // Define um botão como ativo em cada grupo por padrão
+    if (directionBtnsBasic.length > 0) directionBtnsBasic[0].classList.add('active');
+    if (justifyBtns.length > 0) justifyBtns[0].classList.add('active');
+    if (alignBtns.length > 0) alignBtns[0].classList.add('active');
 });

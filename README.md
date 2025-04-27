@@ -12,58 +12,63 @@ O Flexbox Master é uma plataforma educacional web que permite aos usuários apr
 
 ### 🌟 Recursos Principais
 
-- **Seções estruturadas por nível de complexidade**: Introdução, Básico, Intermediário e Avançado
-- **Demonstrações Interativas**: Visualize em tempo real como cada propriedade Flexbox funciona
-- **Playground Flexbox**: Experimente diferentes combinações de propriedades e veja o código CSS gerado
-- **Exercícios Práticos**: Desafios com soluções disponíveis para consolidar o aprendizado
-- **Design Responsivo**: Funciona perfeitamente em dispositivos móveis e desktops
+-   **Seções estruturadas por nível de complexidade**: Introdução, Básico, Intermediário e Avançado
+-   **Demonstrações Interativas**: Visualize em tempo real como cada propriedade Flexbox funciona
+-   **Playground Flexbox**: Experimente diferentes combinações de propriedades e veja o código CSS gerado
+-   **Exercícios Práticos**: Desafios com soluções disponíveis para consolidar o aprendizado
+-   **Design Responsivo**: Funciona perfeitamente em dispositivos móveis e desktops
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5**: Estruturação do conteúdo
-- **CSS3**: Estilização e demonstração das propriedades Flexbox
-- **JavaScript**: Interatividade e demonstrações dinâmicas
-- **Font Awesome**: Ícones e elementos gráficos
+-   **HTML5**: Estruturação do conteúdo
+-   **CSS3**: Estilização e demonstração das propriedades Flexbox
+-   **JavaScript**: Interatividade e demonstrações dinâmicas
+-   **Font Awesome**: Ícones e elementos gráficos
 
 ## 📚 Conteúdo do Curso
 
 ### Introdução ao Flexbox
-- O que é Flexbox
-- Terminologia básica (container, items, eixos)
-- Vantagens do uso de Flexbox
+
+-   O que é Flexbox
+-   Terminologia básica (container, items, eixos)
+-   Vantagens do uso de Flexbox
 
 ### Conceitos Básicos
-- `display: flex`
-- `flex-direction`
-- Comportamento inicial dos flex items
+
+-   `display: flex`
+-   `flex-direction`
+-   Comportamento inicial dos flex items
 
 ### Conceitos Intermediários
-- `justify-content`: Alinhamento no eixo principal
-- `align-items`: Alinhamento no eixo cruzado
-- `flex-wrap`: Controle de quebra de linha
+
+-   `justify-content`: Alinhamento no eixo principal
+-   `align-items`: Alinhamento no eixo cruzado
+-   `flex-wrap`: Controle de quebra de linha
 
 ### Conceitos Avançados
-- `flex-grow`, `flex-shrink`, `flex-basis`
-- `order`: Reorganização visual dos elementos
-- `align-self`: Sobrescrevendo o alinhamento individual
+
+-   `flex-grow`, `flex-shrink`, `flex-basis`
+-   `order`: Reorganização visual dos elementos
+-   `align-self`: Sobrescrevendo o alinhamento individual
 
 ### Playground e Exercícios
-- Playground interativo para testar propriedades
-- Exercícios práticos com casos de uso reais
-- Soluções comentadas para cada exercício
+
+-   Playground interativo para testar propriedades
+-   Exercícios práticos com casos de uso reais
+-   Soluções comentadas para cada exercício
 
 ## 🚀 Como usar
 
 1. Faça o download ou clone este repositório:
-   ```bash
-   git clone https://github.com/seuusuario/flexbox-master.git
-   ```
-   
+    ```bash
+    git clone https://github.com/seuusuario/flexbox-master.git
+    ```
 2. Abra o arquivo `index.html` em qualquer navegador moderno:
-   ```bash
-   cd flexbox-master
-   open index.html
-   ```
+
+    ```bash
+    cd flexbox-master
+    open index.html
+    ```
 
 3. Navegue pelas diferentes seções usando o menu de navegação ou rolando a página.
 
@@ -81,11 +86,11 @@ flexbox-master/
 
 ## 📝 Sugestões para Atualizações Futuras
 
-- [ ] Adicionar mais exemplos de layouts comuns baseados em Flexbox
-- [ ] Implementar modo escuro para reduzir a fadiga visual
-- [ ] Criar um sistema de quizzes para testar o conhecimento
-- [ ] Adicionar comparações entre Flexbox e Grid CSS
-- [ ] Desenvolver funcionalidade para exportar códigos criados no playground
+-   [ ] Adicionar mais exemplos de layouts comuns baseados em Flexbox
+-   [ ] Implementar modo escuro para reduzir a fadiga visual
+-   [ ] Criar um sistema de quizzes para testar o conhecimento
+-   [ ] Adicionar comparações entre Flexbox e Grid CSS
+-   [ ] Desenvolver funcionalidade para exportar códigos criados no playground
 
 ## 📄 Licença
 
@@ -93,7 +98,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE pa
 
 ## 👨‍💻 Autor
 
-Criado por [Seu Nome] - Abril 2025
+Criado por Luis Abrantes - Abril 2025
 
 ---
 

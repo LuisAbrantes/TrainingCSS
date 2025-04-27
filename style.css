@@ -1,0 +1,558 @@
+/* Variáveis e reset */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --dark-bg: #2c3e50;
+    --success-color: #2ecc71;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho e navegação */
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Seções principais */
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.section h3 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.section p {
+    margin-bottom: 1.5rem;
+}
+
+/* Boxes informativas */
+.info-box {
+    background-color: white;
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.info-box ul {
+    margin-left: 1.5rem;
+}
+
+/* Diagrama Flexbox */
+.diagram {
+    margin: 2rem 0;
+}
+
+.flex-diagram {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.flex-container {
+    display: flex;
+    background-color: #eee;
+    padding: 1rem;
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.flex-container .item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 60px;
+}
+
+.diagram-labels {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.container-label {
+    top: -75px;
+    right: 10px;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.item-label {
+    top: -75px;
+    left: 10px;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.axis-label {
+    padding: 0.3rem 0.6rem;
+}
+
+.main-axis {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.cross-axis {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left center;
+    border-color: #9b59b6;
+    color: #9b59b6;
+}
+
+/* Exemplos de código */
+.code-example {
+    background-color: #282c34;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    overflow: auto;
+}
+
+.code-example code {
+    display: block;
+    padding: 1rem;
+    color: #abb2bf;
+    font-family: 'Consolas', 'Monaco', monospace;
+    line-height: 1.5;
+}
+
+/* Áreas de demonstração */
+.demo-area {
+    margin: 1.5rem 0;
+}
+
+.demo {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    min-height: 120px;
+    margin-bottom: 1rem;
+}
+
+.demo-box {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 60px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.demo-box.tall {
+    min-height: 100px;
+}
+
+/* Demos interativas */
+.interactive-demo {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: white;
+}
+
+.interactive-demo h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.demo-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.demo-btn:hover,
+.demo-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Flex-grow e order demos */
+.flex-properties {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.property {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.property label {
+    width: 150px;
+}
+
+.flex-range,
+.order-range {
+    flex: 1;
+}
+
+.flex-grow-demo,
+.order-demo {
+    margin-top: 1rem;
+}
+
+.grow-item[data-item='1'] {
+    background-color: #3498db;
+}
+.grow-item[data-item='2'] {
+    background-color: #2ecc71;
+}
+.grow-item[data-item='3'] {
+    background-color: #e74c3c;
+}
+
+.order-item[data-item='1'] {
+    background-color: #3498db;
+}
+.order-item[data-item='2'] {
+    background-color: #2ecc71;
+}
+.order-item[data-item='3'] {
+    background-color: #e74c3c;
+}
+
+/* Playground */
+.playground {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+.controls-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.control-group select,
+.control-group input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+#reset-playground {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: auto;
+}
+
+#reset-playground:hover {
+    background-color: #e0e0e0;
+}
+
+.playground-demo {
+    display: flex;
+    background-color: #f5f5f5;
+    border: 1px dashed #aaa;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    min-height: 200px;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.code-output {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.code-output h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Exercícios */
+.exercises {
+    margin-top: 3rem;
+}
+
+.exercise {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.exercise h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.exercise-demo {
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.exercise-container {
+    height: 150px;
+    background-color: #f5f5f5;
+    border: 1px dashed #aaa;
+    padding: 1rem;
+}
+
+.nav-exercise .nav-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.card-exercise .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 60%;
+    text-align: center;
+}
+
+.page-layout-demo {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.page-header,
+.page-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.page-content {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.solution {
+    background-color: #f5f5f5;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.solution.show {
+    display: block;
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .diagram-labels .label {
+        position: relative;
+        display: block;
+        margin-bottom: 0.5rem;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    .property {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls-panel {
+        flex-direction: column;
+    }
+
+    .playground-demo {
+        flex-wrap: wrap;
+    }
+}
+
+/* Animações para destacar elementos interativos */
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.highlight {
+    animation: highlight 0.5s ease;
+}

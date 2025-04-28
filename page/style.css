@@ -1,0 +1,160 @@
+/* Reset básico e fonte amigável */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fb;
+    color: #222;
+    line-height: 1.6;
+}
+header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 1.5rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+}
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffb347;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px #0002;
+}
+section {
+    margin-bottom: 2.5rem;
+}
+.teoria-niveis {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.nivel-btn {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #e0e7ef;
+    color: #2d3e50;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.nivel-btn.active,
+.nivel-btn:hover {
+    background: #ffb347;
+    color: #fff;
+}
+#conteudo-teorico {
+    background: #f3f6fa;
+    border-left: 4px solid #2d3e50;
+    padding: 1rem;
+    border-radius: 6px;
+    min-height: 120px;
+}
+.playground-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.playground-controls label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+.playground-container {
+    display: flex;
+    gap: 0.7rem;
+    background: #eaf1fb;
+    padding: 1.2rem;
+    border-radius: 8px;
+    min-height: 90px;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+.playground-container .item {
+    background: #2d3e50;
+    color: #fff;
+    padding: 1.1rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 1px 4px #0001;
+    transition: background 0.2s;
+}
+pre {
+    background: #222;
+    color: #ffb347;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+#exercicio-atual {
+    background: #f3f6fa;
+    border-left: 4px solid #ffb347;
+    padding: 1rem;
+    border-radius: 6px;
+    min-height: 80px;
+    margin-bottom: 1rem;
+}
+#mostrar-solucao,
+#proximo-exercicio {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #2d3e50;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 0.7rem;
+    margin-bottom: 0.7rem;
+    transition: background 0.2s;
+}
+#mostrar-solucao:hover,
+#proximo-exercicio:hover {
+    background: #ffb347;
+    color: #2d3e50;
+}
+footer {
+    text-align: center;
+    padding: 1.2rem 0 0.7rem 0;
+    color: #888;
+    font-size: 1rem;
+}
+@media (max-width: 700px) {
+    main {
+        padding: 0.5rem;
+    }
+    .playground-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+}

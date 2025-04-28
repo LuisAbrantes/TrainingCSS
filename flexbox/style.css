@@ -1,0 +1,84 @@
+body {
+    min-height: 800px;
+    border: 8px solid black;
+    display: flex; /* enables flexbox */
+    gap: 20px;
+    /* justify-content: center; /* main axis (x / linha) */
+    /* align-items: center; /* cross axis (y / coluna) */
+    /* flex-wrap: wrap; /* Faz se tornar responsivo */
+}
+
+#box-1 {
+    flex-shrink: 0;
+}
+
+.box {
+    flex-shrink: 1;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+    font-size: 40pt;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* 
+
+Flex container: 
+
+main axis (position - justify-content): -
+cross axis (position - aligns-items): | 
+
+
+justify-content | align-items:
+
+flex-start: padrao, começa a esquerda
+flex-end: começa a direita
+center: centro
+
+space-between: espacamento entre as divs - as ultimas encostam na borda
+space-around: espacamento entre as divs - só que as ultimas NÃO encostam na borda
+space-evenly: espacamento entre as divs IGUAL A DISTÂNCIA DAS BORDAS as ultimas encostam na borda
+
+
+flex-direction (controla a direção do main axis, que influencia no restante das propriedades do flexbox):
+
+row: default - padrao, começa a esquerda
+row-reverse: direita para esquerda (quando em row-reverse, inverte tambem o caso do flex-end do justify-center)
+column: alinha os elementos em coluna 
+
+
+gap (gap between items - ao inves de margens):
+gap = column-gap + row-gap
+px
+
+
+flex-wrap: 
+
+wrap: Faz se tornar responsivo, colocando o item que nao coube na linha, na próxima linha.
+nowrap: Faz os itens diminuirem o tamanho para se adaptarem ao tamanho do dispositivo.
+
+
+align-content (alinha as linhas do flex container no eixo cruzado - cross axis - controla todas as linhas juntas, 
+enquant align-items controla o coss-axis em cada flexbox individualmente):
+
+flex-start: todas as linhas encostam no início do eixo cruzado (topo)
+flex-end: todas as linhas encostam no final do eixo cruzado (base)
+center: todas as linhas ficam centralizadas no eixo cruzado
+space-between: espaçamento igual entre as linhas, as extremas encostam nas bordas
+space-around: espaçamento igual ao redor de cada linha (incluindo bordas)
+space-evenly: espaçamento igual entre todas as linhas e bordas
+
+Obs: Só funciona quando há mais de uma linha (flex-wrap: wrap)
+
+
+flex-shrink (define quanto o item pode encolher quando o espaço é insuficiente):
+
+0: o item NÃO encolhe, mantém seu tamanho fixo
+1: valor padrão, o item pode encolher para caber no container
+2, 3, ...: quanto maior o valor, mais o item irá encolher em relação aos outros
+
+Obs: Só faz efeito quando o espaço do container é menor que a soma dos tamanhos dos itens.
+*/

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox Master - Aprenda Flexbox do Básico ao Avançado</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <h1>Flexbox Master</h1>
+            <nav>
+                <ul>
+                    <li><a href="#teoria">Teoria</a></li>
+                    <li><a href="#playground">Playground</a></li>
+                    <li><a href="#exercicios">Exercícios</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="teoria">
+                <h2>Teoria Flexbox</h2>
+                <div class="teoria-niveis">
+                    <button class="nivel-btn" data-nivel="basico">
+                        Básico
+                    </button>
+                    <button class="nivel-btn" data-nivel="intermediario">
+                        Intermediário
+                    </button>
+                    <button class="nivel-btn" data-nivel="avancado">
+                        Avançado
+                    </button>
+                </div>
+                <div id="conteudo-teorico">
+                    <!-- Conteúdo teórico dinâmico -->
+                </div>
+            </section>
+            <section id="playground">
+                <h2>Playground Flexbox</h2>
+                <div class="playground-controls">
+                    <label
+                        >flex-direction:
+                        <select id="flex-direction">
+                            <option value="row">row</option>
+                            <option value="row-reverse">row-reverse</option>
+                            <option value="column">column</option>
+                            <option value="column-reverse">
+                                column-reverse
+                            </option>
+                        </select>
+                    </label>
+                    <label
+                        >justify-content:
+                        <select id="justify-content">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="space-evenly">space-evenly</option>
+                        </select>
+                    </label>
+                    <label
+                        >align-items:
+                        <select id="align-items">
+                            <option value="stretch">stretch</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="baseline">baseline</option>
+                        </select>
+                    </label>
+                    <label
+                        >flex-wrap:
+                        <select id="flex-wrap">
+                            <option value="nowrap">nowrap</option>
+                            <option value="wrap">wrap</option>
+                            <option value="wrap-reverse">wrap-reverse</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="playground-container" id="playground-container">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                </div>
+                <pre><code id="css-output"></code></pre>
+            </section>
+            <section id="exercicios">
+                <h2>Exercícios Práticos</h2>
+                <div id="exercicio-atual">
+                    <!-- Exercício dinâmico -->
+                </div>
+                <button id="mostrar-solucao">Mostrar Solução</button>
+                <pre><code id="solucao"></code></pre>
+                <button id="proximo-exercicio">Próximo Exercício</button>
+            </section>
+        </main>
+        <footer>
+            <p>
+                Feito com <span style="color: red">&hearts;</span> por Luis
+                Abrantes - 2025
+            </p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
